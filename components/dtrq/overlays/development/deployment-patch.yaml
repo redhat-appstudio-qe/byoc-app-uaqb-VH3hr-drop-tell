@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: dtrq
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: POC
+          value: POC
+        image: quay.io/redhat-appstudio-qe/byoc-tqvq-tenant/byoc-app-uaqb/dtrq@sha256:3adbf34dfdda6feceb3ba9a24a9f218112d5a20d43704a8cce83ea360831334e
+        name: my-java-quarkus
+        resources: {}
+status: {}

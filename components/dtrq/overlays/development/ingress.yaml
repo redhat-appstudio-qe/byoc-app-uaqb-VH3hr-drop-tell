@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: dtrq
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: dtrq
+    app.kubernetes.io/part-of: byoc-app-uaqb
+  name: dtrq
+spec:
+  rules:
+  - host: dtrq-byoc-tqvq-tenant.apps.18887f80982974c4d988.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: dtrq
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}
